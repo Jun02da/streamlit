@@ -7,6 +7,10 @@ import streamlit as st
 load_dotenv()
 API_KEY = os.environ.get("API_KEY")
 
+if not API_KEY:
+    st.error("API_KEY가 설정되지 않았습니다. .env 파일 또는 환경 변수를 확인하세요.")
+    st.stop()
+
 client = OpenAI(api_key=API_KEY)
 
 thread_id = "thread_90GiVViN9D1lpBBwmRCS2mM6"
