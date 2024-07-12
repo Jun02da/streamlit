@@ -18,7 +18,7 @@ assistant_id = "asst_tfVGLRTf2pguUXgLd12yEC4d"
 
 thread_messages = client.beta.threads.messages.list(thread_id)
 
-st.header("chat")
+st.header("Ari-ChatBot")
 # 기존 대화이력 로드
 # for msg in reversed(thread_messages.data):
 #     with st.chat_message(msg.role):
